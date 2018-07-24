@@ -1,4 +1,5 @@
 from heapq import heapify, heappush, heappop
+
 class Node:
 	def __init__(self, char, freq):
 		self.freq = 0
@@ -33,12 +34,22 @@ class HuffmanCode:
 				dico[char] += 1
 			else:
 				dico[char] = 1
+		self.myleaf(dico)
 
+	def accept_list(self, list):
+		dico = {}
+		for char in string.uppercase and i in list:
+			dico[char] = i
+		self.myleaf(dico)
+		self.huffman_tree()
+		self.huffman_code()
+
+	def MyLeaf(self, dico):
 		for (char, count) in dico.items():
 			leaf = (Node(char, count))
 			self.myList.append(leaf)
 		self.myList = sorted(self.myList, key=lambda leaf: leaf.freq)
-	
+
 	def huffman_tree(self):
 		while len(self.myList) >= 2:
 			nod1 = heappop(self.myList)
