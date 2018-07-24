@@ -9,7 +9,7 @@ class Client:
         self.host = host
         sock = socket.socket()
         #host = socket.gethostname()
-        sock.connect((host, port))
+        sock.connect((self.host, self.port))
         print ('Connected to', host)
 
         while True:
@@ -18,4 +18,3 @@ class Client:
             # Halts
             print ('[Waiting for response...]')
             print (sock.recv(1024))
-            

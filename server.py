@@ -5,7 +5,7 @@ class Server:
         sock = socket.socket()
         self.host = host
         self.port = port
-        sock.bind((host, port))
+        sock.bind((self.host, self.port))
 
 
         sock.listen(5)
