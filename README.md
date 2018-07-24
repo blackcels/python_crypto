@@ -7,7 +7,7 @@ liste des commande avec explication
 /exit                                                           quitter le programme
 /encrypt <crypto_name> <param>                                  crypter ses message en précisant le type d'encodage, HUFF ou RSA, non case sensitive
     if MAN == param:                                            les param en soit sont soit la clées de cryptage RSA, soit man ou auto pour HUFF,
-                                                                en mode manuel il sera demander de rentrer 26 nombre différents qui compose la clée
+                                                                en mode manuel il sera demandé de rentrer 26 nombre différents qui compose la clée
         26x check pondérations caractères
 /send key                                                       envoyer la clée a l'autre personne dans la messagerie
     si aucun crypto choose alors choose one                     si pas de crypto, va chier
